@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* body bg color */
+    --main-bg-color: #f9f8fa;
+
+    /* Best Caption styling */
+    --letter-spacing: 0.2rem;
+    --caption-color: #2f92fb;
+    
+    /* main font */
+    --main-font: 'Poppins', sans-serif;
+
+    --image-height: 680px;
+    --image-width: 550px;
+
+}
+
+body {
+    font-family: var(--main-font);
+}
