@@ -27,7 +27,7 @@ const openMenu = () => {
                     <div class="flex flex-col justify-end w-full pb-8">
                         <div class="flex flex-wrap -m-2">
                             <div class="w-full p-2"><a class="block w-full px-4 py-2.5 text-lg text-center font-bold  text-black bg-transparent hover:bg-slate-300 ring-1 ring-slate-300 focus:ring-gray-600 rounded-full transition-all" href="#login"><span class="font-sans">Log In</span></a></div>
-                            <div class="w-full p-2"><a class="block w-full px-4 py-2.5 text-lg text-center text-white font-bold bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full" href="#get-started"><span class="font-sans">Get Started</a></span></div>
+                            <div class="w-full p-2"><a class="block w-full px-4 py-2.5 text-lg text-center text-white font-bold bg-[var(--blue-color)] hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full" href="#get-started"><span class="font-sans">Get Started</a></span></div>
                         </div>
                     </div>
                 </div>
