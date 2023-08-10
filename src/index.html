@@ -64,12 +64,14 @@
                             <a class="px-4 py-2.5 text-sm md:text-md lg:text-lg text-black font-bold bg-transparent hover:bg-slate-300 ring-1 ring-slate-200 focus:ring-gray-600 rounded-full transition-all" href="#">Log In</a>
                         </div>
                         <!-- Mobile navigation menu -->
-                        <div id="mobile-container" class="w-full">
+                        <div id="mobile-container" class="bg-white rounded-full px-6 py-4 lg:px-0 lg:py-0 lg:bg-opacity-0 w-full transition-all ease-in-out">
                             <nav class="flex flex-row justify-between lg:hidden">
                                 <div>
                                     <a href="/"><img src="../public/assets/logo-no-background.png" class="w-44" alt="sample logo"/></a>
                                 </div>
-                                <div class="flex items-center"><i id="mobile-menu" class="fa-solid fa-bars fa-2xl" style="color: #0955d7;"></i></div>
+                                <div class="flex items-center">
+                                    <i id="hamburger" class="fa-solid fa-bars fa-2xl" style="color: var(--blue-color)"></i>
+                                </div>
                             </nav>
                         </div>
                     </nav>
