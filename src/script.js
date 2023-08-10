@@ -4,15 +4,16 @@ const nextReviewer = document.getElementById("next-reviewer")
 const prevReviewer = document.getElementById("previous-reviewer")
 const cardWidth = slider.querySelector(".card").offsetWidth;
 
-//DOM MOBILE MENU
+//DOM - MOBILE MENU
 const menuContainer = document.getElementById('mobile-container') //not sure for this one yet
 const hamburger = document.getElementById("hamburger") //hamburger icon
 
-const openMenu = () => {
+//open-close hamburger menu function
+const toggleMenu = () => {
     if (hamburger.classList.contains("fa-bars")) {
         hamburger.classList.remove("fa-bars")
         hamburger.classList.add("fa-xmark")
-        hamburger.classList.add("Capitalize")
+        
         hamburger.innerHTML = `
             <nav class="lg:hidden absolute top-20 md:right-16 md:top-24 right-10 backdrop-blur-sm p-8 bg-slate-300/30 rounded-xl">
                 <div class="flex flex-wrap justify-between h-full">
@@ -59,7 +60,6 @@ prevReviewer.addEventListener("click", () => {
     slider.classList.add("snap-x")
 })
 
-
 const dragStart = (e) => {
     isDragging = true;
     slider.classList.add("select-none")
@@ -84,9 +84,8 @@ const dragging = (e) => {
     slider.scrollLeft = startScrollLeft - (e.pageX - startX);
 }
 
-
 //EVENT LISTENERS
 slider.addEventListener("mousedown", dragStart)
 slider.addEventListener("mousemove", dragging)
 document.addEventListener("mouseup", dragStop)
-menuContainer.addEventListener("click", openMenu)
+menuContainer.addEventListener("click", toggleMenu) //mobile menu
