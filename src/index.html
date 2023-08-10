@@ -1,21 +1,32 @@
+<!-- Thought process, although I knew TailwindCSS is a mobile-first framework, when I started developing the project I focused my main layout and design on 
+    a large screen. Totally counterproductive, when it came to making the page fully-responsive. A gruesome experience but very fruitful and quite fun. 
+
+    *developed in brave browser(chromium)
+    *no formatter were used
+    *opted to develop in HTML, CSS and vanilla JavaScript instead of a framework as to not defeat the purpose of the exercise
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Tailwindcss CLI for watching the file styles.css -->
-    <link href="/dist/output.css" rel="stylesheet" />
 
-    <!-- My css for the global styling and css variable -->
-    <link href="styles.css" rel="stylesheet" />
+    <!-- Tailwindcss CLI for watching the file styles.css -->
+    <!-- Run: npx tailwindcss -i ./src/styles.css -o ./dist/output.css --watch -->
+    <link href="/dist/output.css" rel="stylesheet" />
 
     <!-- Tailwindcss cdn for easier integration, not production ready -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Google font: Poppins -->
+    <!-- My css for the global styling and css variable -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Google font: Poppins and Zilla Slab -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300&display=swap" rel="stylesheet">
 
     <!-- Font-awesome for the icons-->
     <script src="https://kit.fontawesome.com/24c89dd9a1.js" crossorigin="anonymous"></script>
@@ -23,7 +34,7 @@
     <!-- js script for the slider animation and interaction -->
     <script src="script.js" defer></script>
 
-    <title>Giant Focal | Test Project</title>
+    <title>GiantFocal | Test Project</title>
   </head>
   <body>
     <div class="h-full min-h-screen w-full pt-6 bg-[var(--main-bg-color)] overflow-hidden lg:px-12">
@@ -79,9 +90,11 @@
                     </div>
                     <div class="mt-7"></div>
                     <div class="flex items-center gap-4">
-                        <a class="px-4 py-2.5    text-sm text-white font-bold bg-[var(--blue-color)] hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full transition-all" href="#">Get Started</a>
+                        <a class="px-4 py-2.5  text-sm text-white font-bold bg-[var(--blue-color)] hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full transition-all" href="#">Get Started</a>
                         <a class="px-4 py-2.5 text-black font-bold bg-transparent hover:bg-slate-300 ring-1 ring-slate-200 focus:ring-gray-600 rounded-full transition-all" href="#">Watch Video</a>
                     </div>
+
+                    <!-- slider container **infinity-scroll to be added -->
                     <div class="pt-12 h-full">
                         <div class="flex gap-6">
                             <div id='next-reviewer' class="m-auto text-4xl px-3 py-1 bg-white hover:bg-slate-200 rounded-full cursor-pointer shadow-lg"><i class="fa-solid fa-angle-left"></i></div>
@@ -200,7 +213,6 @@
                     <!-- I added a second image just to fill the area and not to stretch the single image, and also just to play with it -->
                     <img src="/public/assets/side-image.jpg" class="m-auto mb-4 rounded-3xl h-[var(--mobile-height)] w-[var(--mobile-width)] md:w-auto md:m-0 md:my-10 lg:hidden lg:h-[var(--lg-height)] lg:w-full mt-10" alt="thumbs up side image"/>
                 </div>
-                
             </div>
         </div>
     </div>

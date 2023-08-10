@@ -5,6 +5,8 @@
 /* Box model */
 *, *::after, *::before {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* CSS variables */
@@ -19,7 +21,9 @@
     --blue-color: #2f92fb;
     
     /* global font style*/
-    --main-font: 'Poppins', sans-serif;
+    --main-font: 'Poppins';
+    --secondary-font: 'Zilla Slab';
+    --safe-font: serif;
 
     /* image height and width, used for responsive image design */
     --mobile-height: 550px;
@@ -36,6 +40,5 @@
 }
 
 body {
-    font-family: var(--main-font);
-    margin: 0;
+    font-family: var(--main-font), var(--secondary-font), var(--safe-font);
 }
