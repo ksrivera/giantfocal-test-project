@@ -34,16 +34,16 @@
     <!-- js script for the slider animation and interaction -->
     <script src="script.js" defer></script>
 
-    <title>GiantFocal | Test Project</title>
+    <link rel="icon" type="image/x-icon" href="/public/assets/logo-color.ico">
+
+    <title>Giant Focal | Test Project</title>
   </head>
   <body>
-    <div class="h-full min-h-screen w-full pt-6 bg-[var(--main-bg-color)] overflow-hidden lg:px-12">
-        <!-- Global margin-top -->
-        <div class="mx-10">
+    <div class="pt-6 h-screen bg-[var(--main-bg-color)] overflow-hidden">
             <!-- Main wrapper for the 12-columns grid -->
-            <div class="flex flex-col lg:grid lg:grid-cols-12 m-auto">
+            <div class="container lg:grid lg:grid-cols-12 m-auto">
                 <header class="lg:col-span-12 mb-6">
-                    <nav class="md:flex md:justify-between lg:px-6 lg:py-6 lg:grid lg:grid-cols-3 md:px-6 md:py-3.5 lg:bg-white lg:rounded-full">
+                    <nav class="md:flex md:justify-between  lg:grid lg:grid-cols-3 lg:px-6 lg:py-6 lg:bg-white lg:rounded-full">
                          <!-- Left side: Navigation bar logo -->
                         <div class="hidden md:hidden lg:flex lg:items-center">
                             <!-- logo was made thru www.logo.com -->
@@ -90,7 +90,7 @@
                         <p class="text-2xl font-bold">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
                     </div>
                     <div class="mt-7"></div>
-                    <div class="flex items-center gap-4">
+                    <div class="flex flex-row md:flex md:items-center md:gap-4">
                         <a class="px-4 py-2.5  text-sm text-white font-bold bg-[var(--blue-color)] hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full transition-all" href="#">Get Started</a>
                         <a class="px-4 py-2.5 text-black font-bold bg-transparent hover:bg-slate-300 ring-1 ring-slate-200 focus:ring-gray-600 rounded-full transition-all" href="#">Watch Video</a>
                     </div>
@@ -206,13 +206,11 @@
                     </div>
                 </div>
                 <!-- column span filler to help achieve the 12 column grid in medium devices -->
-                <div class="md:col-span-2"></div>
+                <div class="md:col-span-1 lg:col-span-2"></div>
 
                 <!-- images were downloaded from www.pexels.com -->
-                <div class="md:col-span-4 md:flex md:justify-around md:gap-6 lg:flex-none">
+                <div class="md:col-span-6 lg:col-span-4 md:flex md:justify-around md:gap-6 lg:flex-none">
                     <img src="../public/assets/side-image-2.webp" class="m-auto mb-4 rounded-3xl h-[var(--mobile-height)] w-[var(--mobile-width)] md:w-auto md:m-0 md:my-10 lg:h-[var(--lg-height)] lg:w-full mt-10" alt="thumbs up side image"/>
-                    <!-- I added a second image just to fill the area and not to stretch the single image, and also just to play with it -->
-                    <img src="../public/assets/side-image.jpg" class="m-auto mb-4 rounded-3xl h-[var(--mobile-height)] w-[var(--mobile-width)] md:w-auto md:m-0 md:my-10 lg:hidden lg:h-[var(--lg-height)] lg:w-full mt-10" alt="thumbs up side image"/>
                 </div>
             </div>
         </div>
