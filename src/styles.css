@@ -11,11 +11,14 @@
 
 /* CSS variables */
 :root {
-    /* body bg color */
+    /* main background color */
     --main-bg-color: #f9f8fa;
 
+    /* main container margin */
+    --margin-top-bottom: 30px;
+
     /* best caption letter spacing */
-    --letter-spacing: 0.2rem;
+    --letter-spacing: 0.4rem;
 
     /* main color blue theme color */
     --blue-color: #2f92fb;
@@ -25,10 +28,8 @@
     --secondary-font: 'Zilla Slab';
     --safe-font: serif;
 
-    /* image height and width, used for responsive image design */
-    --mobile-height: 550px;
-    --mobile-width: 550px;
-    --lg-height: 700px;
+    /* side image max-height */
+    --max-height: 710px;
 
     /* font-awesome icon color for the reviews*/
     --green-star: #00b16e;
@@ -39,6 +40,7 @@
     --max-nav-breakpoint: 1200px;
 }
 
-body {
+.main-container {
+    padding: var(--margin-top-bottom) 0;
     font-family: var(--main-font), var(--secondary-font), var(--safe-font);
 }

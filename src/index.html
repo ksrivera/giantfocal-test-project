@@ -34,20 +34,21 @@
     <!-- js script for the slider animation and interaction -->
     <script src="script.js" defer></script>
 
-    <link rel="icon" type="image/x-icon" href="/public/assets/logo-color.ico">
+    <link rel="icon" type="image/x-icon" href="../public/assets/logo-color.ico">
 
     <title>Giant Focal | Test Project</title>
   </head>
-  <body>
-    <div class="pt-6 h-screen bg-[var(--main-bg-color)] overflow-hidden">
-            <!-- Main wrapper for the 12-columns grid -->
-            <div class="container lg:grid lg:grid-cols-12 m-auto">
-                <header class="lg:col-span-12 mb-6">
-                    <nav class="md:flex md:justify-between  lg:grid lg:grid-cols-3 lg:px-6 lg:py-6 lg:bg-white lg:rounded-full">
+  <body class="bg-[var(--main-bg-color)]">
+    <!-- main container for padding, margin, and background color -->
+    <div class="main-container">
+            <!-- 12-columns grid -->
+            <div class="grid-cols-4 px-16 lg:grid lg:grid-cols-12"> 
+                <header class="lg:col-span-12 lg:mb-6">
+                    <nav id="nav" class="flex bg-white px-6 py-4 justify-between lg:grid lg:grid-cols-3 lg:px-6 lg:py-6 rounded-full w-full">
                          <!-- Left side: Navigation bar logo -->
-                        <div class="hidden md:hidden lg:flex lg:items-center">
+                        <div class="w-40 sm:w-52 lg:flex lg:items-center">
                             <!-- logo was made thru www.logo.com -->
-                            <a href="#"><img src="../public/assets/logo-no-background.png" class=" w-40 h-auto md:h-10 md:w-44" alt="Logo"/></a>
+                            <a href="/"><img src="../public/assets/logo-no-background.png" class="h-auto md:h-10" alt="Logo"/></a>
                         </div>
                         <!-- Center: Navigation Options (hidden on lg screens) -->
                         <div class="hidden min-[var(--min-nav-breakpoint)]:visible max-[1200px]:invisible lg:flex lg:justify-center">
@@ -60,59 +61,54 @@
                         </div>
                         <!-- Right side: Login and Get Started (hidden on lg screens) -->
                         <div class="hidden min-[var(--min-nav-breakpoint)]:visible max-[var(--max-nav-breakpoint)]:invisible lg:flex lg:flex-row-reverse lg:gap-4">
-                            <a class="px-4 py-2.5 text-sm md:text-md lg:text-lg text-white font-bold bg-[var(--blue-color)] hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full transition-all" href="#">Get Started</a>
-                            <a class="px-4 py-2.5 text-sm md:text-md lg:text-lg text-black font-bold bg-transparent hover:bg-slate-300 ring-1 ring-slate-200 focus:ring-gray-600 rounded-full transition-all" href="#">Log In</a>
+                            <a class="px-4 py-2.5 text-sm md:text-md lg:text-lg text-white font-extrabold bg-[var(--blue-color)] hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full transition-all" href="#">Get Started</a>
+                            <a class="px-4 py-2.5 text-sm md:text-md lg:text-lg text-black font-black bg-transparent hover:bg-slate-300 ring-1 ring-slate-200 focus:ring-gray-600 rounded-full transition-all" href="#">Log In</a>
                         </div>
-                        <!-- Mobile navigation menu -->
-                        <div id="mobile-container" class="bg-white rounded-full px-6 py-4 lg:px-0 lg:py-0 lg:bg-opacity-0 w-full transition-all ease-in-out">
-                            <nav class="flex flex-row justify-between lg:hidden">
-                                <div>
-                                    <a href="/"><img src="../public/assets/logo-no-background.png" class="w-44" alt="sample logo"/></a>
-                                </div>
-                                <div class="flex items-center">
-                                    <i id="hamburger" class="fa-solid fa-bars fa-2xl" style="color: var(--blue-color)"></i>
-                                </div>
-                            </nav>
+
+                        <div id="hamburger-menu" class="flex items-center lg:hidden">
+                            <i id="menu-toggle" class="fa-solid fa-bars fa-lg sm:fa-2xl" style="color: var(--blue-color)"></i>
                         </div>
+           
                     </nav>
                 </header>
+                <div id="display-menu" class="lg:hidden"></div>
 
                 <!-- Content body of the index page -->
-                <div class="lg:col-span-6">
-                    <div class="pt-12 tracking-[var(--letter-spacing)]">
-                        <h4 class="text-2xl text-[var(--blue-color)] font-semibold uppercase">Best Caption Here</h4>
+                <div class="col-span-6">
+                    <div class="pt-5 md:pt-12 tracking-[var(--letter-spacing)]">
+                        <h4 class="text-lg md:text-2xl text-[var(--blue-color)] font-semibold uppercase">Best Caption Here</h4>
                     </div>
-                    <div class="pt-7">
-                        <h1 class="text-7xl font-semibold">Build online business from home.</h1>
+                    <div class="pt-4 md:pt-7">
+                        <h1 class="text-5xl md:text-7xl font-semibold">Build online business from home.</h1>
                     </div>
-                    <div class="pt-11">
+                    <div class="pt-8 md:pt-11">
                         <!-- I only copied the paragraph given on the reference image for the sole purpose of replication -->
-                        <p class="text-2xl font-bold">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
+                        <p class="text-lg md:text-2xl font-bold">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat.</p>
                     </div>
                     <div class="mt-7"></div>
-                    <div class="flex flex-row md:flex md:items-center md:gap-4">
-                        <a class="px-4 py-2.5  text-sm text-white font-bold bg-[var(--blue-color)] hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full transition-all" href="#">Get Started</a>
-                        <a class="px-4 py-2.5 text-black font-bold bg-transparent hover:bg-slate-300 ring-1 ring-slate-200 focus:ring-gray-600 rounded-full transition-all" href="#">Watch Video</a>
+                    <div class="flex flex-col text-center md:flex-row gap-4" >
+                        <a class="px-4 py-2.5 text-sm md:text-lg text-white font-bold bg-[var(--blue-color)] hover:bg-blue-600 focus:ring-4 focus:ring-blue-200 rounded-full transition-all" href="#">Get Started</a>
+                        <a class="px-4 py-2.5 text-sm md:text-lg text-black font-bold bg-transparent hover:bg-slate-300 ring-1 ring-slate-200 focus:ring-gray-600 rounded-full transition-all" href="#">Watch Video</a>
                     </div>
 
                     <!-- slider container **infinity-scroll to be added -->
-                    <div class="pt-12 h-full">
-                        <div class="flex gap-6">
-                            <div id='next-reviewer' class="m-auto text-4xl px-3 py-1 bg-white hover:bg-slate-200 rounded-full cursor-pointer shadow-lg"><i class="fa-solid fa-angle-left"></i></div>
-                            <ul id="slider" class="grid grid-flow-col gap-10 lg:gap-12 items-center overflow-hidden scroll-smooth">
+                    <div class="pt-12 w-full">
+                        <div class="flex gap-2 md:gap-10 lg:gap-5 2xl:gap-4">
+                            <div id='next-reviewer' class="m-auto text-2xl md:text-4xl px-3 py-1 bg-white hover:bg-slate-200 rounded-full cursor-pointer shadow-lg"><i class="fa-solid fa-angle-left"></i></div>
+                            <ul id="slider" class="grid justify-start grid-flow-col gap-4 sm:gap-6 lg:gap-7 2xl:gap-4 overflow-hidden scroll-smooth">
                                 <!-- Reviewer cards, more items were added for testing purposes -->
-                                <li class="card flex flex-col justify-around p-8 h-40 w-60 md:h-52 md:w-72 lg:w-80 rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
                                     </div>
-                                    <p class="text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
-                                    <h5>Trustpilot</h5>
+                                    <p class="text-md md:text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
+                                    <h5 class="text-md md:text-lg">Trustpilot</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-8 w-60 md:h-52 md:w-72 lg:w-80  rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
@@ -121,42 +117,20 @@
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                     </div>
                                     <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(18K Reviews)</span></p>
-                                    <h5>Capterra1</h5>
+                                    <h5 class="text-md md:text-lg">Capterra</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-8 w-60 md:h-52 md:w-72 lg:w-80 rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
                                     </div>
-                                    <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
-                                    <h5>Trustpilot2</h5>
-                                </li>   
-                                <li class="card flex flex-col justify-around p-8 w-60 md:h-52 md:w-72 lg:w-80  rounded-3xl bg-white cursor-grab snap-start">
-                                    <div>
-                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
-                                    </div>
-                                    <p class="card text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(18K Reviews)</span></p>
-                                    <h5>Capterra3</h5>
-                                </li>  
-                                <li class="flex flex-col justify-around p-8 w-60 md:h-52 md:w-72 lg:w-80 rounded-3xl bg-white cursor-grab snap-start">
-                                    <div>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                    </div>
-                                    <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(45K  Reviews)</span></p>
-                                    <h5>Trustpilot3</h5>
+                                    <p class="text-md md:text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
+                                    <h5 class="text-md md:text-lg">Trustpilot2</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-8 w-60 md:h-52 md:w-72 lg:w-80 rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72  xl:h-56 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
@@ -165,20 +139,20 @@
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                     </div>
                                     <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(18K Reviews)</span></p>
-                                    <h5>Capterra4</h5>
+                                    <h5 class="text-md md:text-lg">Capterra12</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-8 w-60 md:h-52 md:w-72 lg:w-80 rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
                                     </div>
-                                    <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(45K  Reviews)</span></p>
-                                    <h5>Trustpilot4</h5>
+                                    <p class="text-md md:text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
+                                    <h5 class="text-md md:text-lg">Trustpilot3</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-8 w-60 md:h-52 md:w-72 lg:w-80 rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72  xl:h-56 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
@@ -187,30 +161,63 @@
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                     </div>
                                     <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(18K Reviews)</span></p>
-                                    <h5>Capterra5</h5>
+                                    <h5 class="text-md md:text-lg">Capterra3</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-8 h-40 w-60 md:h-52 md:w-72 lg:w-80 rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
-                                        <i class="fa-solid fa-star" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
                                     </div>
-                                    <p class="text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
-                                    <h5>Trustpilot</h5>
+                                    <p class="text-md md:text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
+                                    <h5 class="text-md md:text-lg">Trustpilot4</h5>
+                                </li>
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
+                                    <div>
+                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
+                                    </div>
+                                    <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(18K Reviews)</span></p>
+                                    <h5 class="text-md md:text-lg">Capterra4</h5>
+                                </li>
+                                <<li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
+                                    <div>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                        <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
+                                    </div>
+                                    <p class="text-md md:text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
+                                    <h5 class="text-md md:text-lg">Trustpilot5</h5>
+                                </li>
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
+                                    <div>
+                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
+                                        <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
+                                    </div>
+                                    <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(18K Reviews)</span></p>
+                                    <h5 class="text-md md:text-lg">Capterra5</h5>
                                 </li>
                             </ul>
-                            <div id='previous-reviewer' class="m-auto text-4xl px-3 py-1 bg-white hover:bg-slate-200 rounded-full cursor-pointer shadow-lg"><i class="fa-solid fa-angle-right"></i></div>
+                            <div id='previous-reviewer' class="m-auto text-2xl md:text-4xl px-3 py-1 bg-white hover:bg-slate-200 rounded-full cursor-pointer shadow-lg"><i class="fa-solid fa-angle-right"></i></div>
                         </div>
                     </div>
                 </div>
                 <!-- column span filler to help achieve the 12 column grid in medium devices -->
-                <div class="md:col-span-1 lg:col-span-2"></div>
+                <div class="md:col-span-1 xl:col-span-2"></div>
 
                 <!-- images were downloaded from www.pexels.com -->
-                <div class="md:col-span-6 lg:col-span-4 md:flex md:justify-around md:gap-6 lg:flex-none">
-                    <img src="../public/assets/side-image-2.webp" class="m-auto mb-4 rounded-3xl h-[var(--mobile-height)] w-[var(--mobile-width)] md:w-auto md:m-0 md:my-10 lg:h-[var(--lg-height)] lg:w-full mt-10" alt="thumbs up side image"/>
+                <div class="md:col-span-5 xl:col-span-4 flex mt-10">
+                    <img src="../public/assets/side-image-2.webp" class="w-full max-h-[var(--max-height)] min-h-full mb-4 rounded-3xl" alt="thumbs up side image"/>
                 </div>
             </div>
         </div>
