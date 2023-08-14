@@ -24,6 +24,18 @@ let swiper = new Swiper(".mySwiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        // when window width is <= 499px
+        300: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 50
+        },
+        // when window width is <= 999px
+        540: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 50
+        }
+    }
   });
 
 //Mobile menu event listener
