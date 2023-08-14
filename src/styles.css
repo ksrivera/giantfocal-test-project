@@ -41,6 +41,10 @@
     --max-nav-breakpoint: 1200px;
 }
 
-.main-container {
+body {
     font-family: var(--main-font), var(--secondary-font), var(--safe-font);
 }
+  
+  
+  
+  
