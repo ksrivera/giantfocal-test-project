@@ -39,16 +39,16 @@
     <title>Giant Focal | Test Project</title>
   </head>
   <body class="bg-[var(--main-bg-color)]">
-    <!-- main container for padding, margin, and background color -->
-    <div class="main-container">
+    <!-- main container -->
+    <div class="flex h-full w-full lg:container m-auto py-6">
             <!-- 12-columns grid -->
-            <div class="grid-cols-4 px-16 lg:grid lg:grid-cols-12"> 
-                <header class="lg:col-span-12 lg:mb-6">
+            <div class="px-16 lg:grid lg:grid-cols-12 h-full w-full"> 
+                <header class="relative lg:col-span-12 lg:mb-6 h-full w-full">
                     <nav id="nav" class="flex bg-white px-6 py-4 justify-between lg:grid lg:grid-cols-3 lg:px-6 lg:py-6 rounded-full w-full">
                          <!-- Left side: Navigation bar logo -->
                         <div class="w-40 sm:w-52 lg:flex lg:items-center">
                             <!-- logo was made thru www.logo.com -->
-                            <a href="/"><img src="../public/assets/logo-no-background.png" class="h-auto md:h-10" alt="Logo"/></a>
+                            <a href="/"><img src="../public/assets/logo-no-background.png" class="" alt="Logo"/></a>
                         </div>
                         <!-- Center: Navigation Options (hidden on lg screens) -->
                         <div class="hidden min-[var(--min-nav-breakpoint)]:visible max-[1200px]:invisible lg:flex lg:justify-center">
@@ -68,11 +68,10 @@
                         <div id="hamburger-menu" class="flex items-center lg:hidden">
                             <i id="menu-toggle" class="fa-solid fa-bars fa-lg sm:fa-2xl" style="color: var(--blue-color)"></i>
                         </div>
-           
                     </nav>
+                    <div id="display-menu" class="absolute left-0 right-0 h-full lg:hidden"></div>
                 </header>
-                <div id="display-menu" class="lg:hidden"></div>
-
+                
                 <!-- Content body of the index page -->
                 <div class="col-span-6">
                     <div class="pt-5 md:pt-12 tracking-[var(--letter-spacing)]">
@@ -92,12 +91,12 @@
                     </div>
 
                     <!-- slider container **infinity-scroll to be added -->
-                    <div class="pt-12 w-full">
+                    <div class="pt-4 w-full">
                         <div class="flex gap-2 md:gap-10 lg:gap-5 2xl:gap-4">
                             <div id='next-reviewer' class="m-auto text-2xl md:text-4xl px-3 py-1 bg-white hover:bg-slate-200 rounded-full cursor-pointer shadow-lg"><i class="fa-solid fa-angle-left"></i></div>
-                            <ul id="slider" class="grid justify-start grid-flow-col gap-4 sm:gap-6 lg:gap-7 2xl:gap-4 overflow-hidden scroll-smooth">
+                            <ul id="slider" class="w-full max-h-52 max-w-64 md:min-w-4 grid justify-start grid-flow-col gap-1 sm:gap-6 lg:gap-7 2xl:gap-4 overflow-hidden scroll-smooth">
                                 <!-- Reviewer cards, more items were added for testing purposes -->
-                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56 rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-40 sm:w-56 md:w-80 lg:w-64 xl:h-48 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
                                         <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
@@ -108,7 +107,7 @@
                                     <p class="text-md md:text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
                                     <h5 class="text-md md:text-lg">Trustpilot</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56 rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-64 xl:h-48 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
@@ -119,7 +118,7 @@
                                     <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(18K Reviews)</span></p>
                                     <h5 class="text-md md:text-lg">Capterra</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-48 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
                                         <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
@@ -130,7 +129,7 @@
                                     <p class="text-md md:text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
                                     <h5 class="text-md md:text-lg">Trustpilot2</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72  xl:h-56 rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-48 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
@@ -141,7 +140,7 @@
                                     <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(18K Reviews)</span></p>
                                     <h5 class="text-md md:text-lg">Capterra12</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-48 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
                                         <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
@@ -152,7 +151,7 @@
                                     <p class="text-md md:text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
                                     <h5 class="text-md md:text-lg">Trustpilot3</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72  xl:h-56 rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-48 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
@@ -163,7 +162,7 @@
                                     <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(18K Reviews)</span></p>
                                     <h5 class="text-md md:text-lg">Capterra3</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-48 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
                                         <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
@@ -174,7 +173,7 @@
                                     <p class="text-md md:text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
                                     <h5 class="text-md md:text-lg">Trustpilot4</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-48 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
@@ -185,7 +184,7 @@
                                     <p class="text-lg"><span class="font-bold">4.1/5 </span><span class="text-slate-500">(18K Reviews)</span></p>
                                     <h5 class="text-md md:text-lg">Capterra4</h5>
                                 </li>
-                                <<li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
+                                <<li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-48 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
                                         <i class="fa-solid fa-star fa-sm md:fa-lg" style="color: var(--green-star)"></i>
@@ -196,7 +195,7 @@
                                     <p class="text-md md:text-lg"><span class="font-bold">4.2/5 </span><span class="text-slate-500">(45K Reviews)</span></p>
                                     <h5 class="text-md md:text-lg">Trustpilot5</h5>
                                 </li>
-                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-56  rounded-3xl bg-white cursor-grab snap-start">
+                                <li class="card flex flex-col justify-around p-4 md:p-8 w-44 sm:w-56 md:w-80 lg:w-72 xl:h-48 rounded-3xl bg-white cursor-grab snap-start">
                                     <div>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
                                         <i class="fa-solid fa-star" style="color: var(--orange-star)"></i>
@@ -213,11 +212,11 @@
                     </div>
                 </div>
                 <!-- column span filler to help achieve the 12 column grid in medium devices -->
-                <div class="md:col-span-1 xl:col-span-2"></div>
+                <div class="md:col-span-1 2xl:col-span-2"></div>
 
                 <!-- images were downloaded from www.pexels.com -->
-                <div class="md:col-span-5 xl:col-span-4 flex mt-10">
-                    <img src="../public/assets/side-image.webp" class="w-full max-h-[var(--max-height)] min-h-full mb-4 rounded-3xl" alt="thumbs up side image"/>
+                <div class="flex md:col-span-5 mt-10 lg:mt-0 md:justify-center 2xl:col-span-4 lg:justify-center xl:justify-end">
+                    <img src="../public/assets/side-image.webp" class="w-full max-h-[var(--max-height)] min-h-full max-w-xl min-w-[200px] mb-4 rounded-3xl" alt="thumbs up side image"/>
                 </div>
             </div>
         </div>

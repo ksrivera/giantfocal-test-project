@@ -11,11 +11,12 @@
 
 /* CSS variables */
 :root {
+    /* main container variables */
+    --max-height: 100vh;
+    --max-width: 160vw;
+
     /* main background color */
     --main-bg-color: #f9f8fa;
-
-    /* main container margin */
-    --margin-top-bottom: 30px;
 
     /* best caption letter spacing */
     --letter-spacing: 0.4rem;
@@ -41,6 +42,5 @@
 }
 
 .main-container {
-    padding: var(--margin-top-bottom) 0;
     font-family: var(--main-font), var(--secondary-font), var(--safe-font);
 }

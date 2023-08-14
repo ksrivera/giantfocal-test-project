@@ -20,23 +20,25 @@ menuContainer.addEventListener("click",  () => {
         toggleNav.classList.remove("rounded-full")
         toggleNav.classList.add("bg-stone-200/30")
         toggleNav.classList.add("rounded-t-2xl")
-        displayMenu.innerHTML = `                            
-            <div class="flex flex-col justify-center p-4 gap-3 bg-stone-200/30 rounded-b-2xl backdrop-blur-lg transition-all">
-                <ul class="flex flex-col gap-3">
-                    <li><a class="flex text-lg font-semibold text-black  p-2" href="#features">Features</a></li>
-                    <li><a class="flex text-lg font-semibold text-black p-2" href="#solutions">Solutions</a></li>
-                    <li><a class="flex text-lg font-semibold text-black  p-2" href="#resources">Resources</a></li>
-                    <li><a class="flex text-lg font-semibold text-black  p-2" href="#pricing">Pricing</a></li>
-                    <li><a class="flex text-lg font-semibold text-red-500  p-2" href="#pricing">Log In</a></li>
-                    <li><a class="flex text-lg font-semibold text-[var(--blue-color)] p-2" href="#resources">Get Started</a></li>
-                </ul>
-            </div>
 
+        displayMenu.classList.add("absolute")
+
+        displayMenu.innerHTML = `                            
+                <ul class="flex flex-col gap-10 p-5 h-screen backdrop-blur-lg bg-stone-200/30 rounded-b-2xl">
+                    <li class="list-none"><a class=" text-lg font-semibold text-black p-2" href="#features">Features</a></li>
+                    <li class="list-none"><a class=" text-lg font-semibold text-black p-2" href="#solutions">Solutions</a></li>
+                    <li class="list-none"><a class=" text-lg font-semibold text-black p-2" href="#resources">Resources</a></li>
+                    <li class="list-none"><a class=" text-lg font-semibold text-black p-2" href="#pricing">Pricing</a></li>
+                    <li class="list-none"><a class=" text-lg font-semibold text-red-500 p-2" href="#pricing">Log In</a></li>
+                    <li class="list-none"><a class=" text-lg font-semibold text-[var(--blue-color)] p-2" href="#resources">Get Started</a></li>
+                </ul>
         ` 
     }
 
     else {
         displayMenu.innerHTML = '';
+        displayMenu.classList.remove("absolute")
+
         toggleNav.classList.remove("rounded-t-2xl")
         toggleNav.classList.remove("bg-stone-200/30")
         toggleNav.classList.add("rounded-full")
